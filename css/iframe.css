@@ -1,0 +1,11 @@
+body {
+	font-family: sans-serif;
+	font-size: 20px;
+	padding-left: 150px;
+	margin: 8px;
+	background-color: #effcff;
+}
+*.center {
+	margin: inherit auto;
+	text-align: center;
+}
