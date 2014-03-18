@@ -55,7 +55,7 @@ section#nav {
 		margin: 0;
 		height: 0px;
 		border: 1px solid #cccccc;
-		background-color: 1px solid #cccccc;
+		background-color: #cccccc;
 		color: #cccccc;
 	}
 	section#nav a {
