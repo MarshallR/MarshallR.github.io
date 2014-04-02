@@ -14,7 +14,6 @@ div#header {
 	background-color: #fff;
 	box-shadow: 0 0 5px #ddd;
 	margin-top: 30px;
-	z-index: 1;
 }
 	div#header h2 {
 		line-height: 60px;
@@ -25,7 +24,6 @@ div#nav {
 	height: 35px;
 	background-color: #efefef;
 	box-shadow: 0 2px 3px #ddd;
-	z-index: 0;
 	color: #666;
 	font-weight: bold;
 }
