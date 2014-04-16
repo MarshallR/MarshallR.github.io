@@ -45,3 +45,24 @@ div#bodyspace {
 		text-align: justify;
 		padding-bottom: 10px;
 	}
+section.project {
+	width: 75%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	background-color: #f7edd8;
+	box-shadow: 0 0 10px #ddd;
+	margin-bottom: 30px;
+}
+	section.project img {
+		width: 120px;
+		padding: 10px;
+	}
+	section.project p {
+		text-align: center !important;
+		font-size: 30px;
+	}
+	section.project:hover {
+		background-color: #f6e9cf;
+		box-shadow: 0 0 15px #bbb;
+	}

@@ -3,6 +3,8 @@
 	<title>Marshall's Freaking Website</title>
 	<link rel="stylesheet" type="text/css" href="./css/master.min.css" />
 	<link rel="stylesheet" type="text/css" href="./css/style.css" />
+	<link rel="stylesheet" type="text/css" href="./css/media.css" />
+	<meta name="viewport" content="width=device-width, user-scalable=no">
 </head>
 <body><div id="wrapper">
 	<div id="header" class="centerself">
@@ -15,12 +17,36 @@
 			<li><a href="./res.htm">Resum&eacute;</a></li>
 			<li><a href="./contact.htm">Contact</a></li>
 		</ul>
+		<select onchange="location = this.options[this.selectedIndex].value;">
+			<option>Please select</option>
+			<option value="./index.html">Home</option>
+			<option value="./res.htm">Resume&eacute;</option>
+			<option value="./contact.htm">Contact</option>
+		</select>
 	</div>
 	</section>
 	<div id="bodyspace" class="centerself">
 		<p class="textCenter">
 			This is <span id="j-web">a Webbersite</span>.
 		</p>
+		<p>
+			Marshall is a kid from Texas who has no real aspirations and dabbles in Computer Programming and other wastes of time. This is his site. He enjoys rambling on in the third person so as to put content on a site that's practically useless.
+		</p>
+		<p>
+			You should go check out some of his projects:
+		</p>
+		<a href="https://marshallr.visualstudio.com/"><section class="project">
+			<img src="./images/visual.png" alt="Visual Studio 2013 Logo" title="Visual Studio 2013" />
+			<p>
+				Microsoft Visual Studio Projects
+			</p>
+		</a></section>
+		<a href="#"><section class="project">
+			<img src="./images/web.png" alt="HTML 5 Logo and revised HTML 5 Logo used under Creative Commons 3.0" title="HTML, CSS, Javascript, etc." />
+			<p>
+				Web Dev Crap
+			</p>
+		</a></section>
 	</div>
 </div>
 

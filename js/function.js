@@ -23,10 +23,12 @@ function navbar() {
 }
 
 //'webbersite' text
-var webname = function() {
+function webname() {
 	document.getElementById('j-web').innerHTML = choose(['a Webbersite', 'a Website', 'a Webthing', 'an Interwebs Site', 'an Amazing Creation', 'an Interblog', 'a Webtube', 'a Holdup', 'a Piece of Crap', 'a Line of Text']);
 }
 
+//funny button function
+
 //activate
-window.onscroll = navbar();
-window.onload = webname();
+window.onscroll = navbar;
+window.onload = webname;
