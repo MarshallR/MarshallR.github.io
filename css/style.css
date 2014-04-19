@@ -1,3 +1,6 @@
+html,body{margin:0;padding:0;border:none;height:100%;width:100%;}body{font:1.0em/1.25 Arial,Helvetica,Sans-Serif;}p,th,td,li,dd,dt,ul,ol,q,acronym,abbr,a,input,select,textarea,h1,h2,h3,h4,h5,h6{margin:0;padding:0;}blockquote{margin:1.25em;padding:1.25em;}q {font-style:italic;}acronym,abbr{cursor:help;border-bottom:1px dashed #000;}small{font-size:.85em;}big {font-size:1.2em;}a,a:link,a:visited,a:active,a:hover{text-decoration:none;outline:none;}img{border:none;outline:none;}table {margin:0;padding:0;border:none;}form {margin:0;padding:0;display:inline;}label{cursor:pointer;}.clear{clear:both;}.floatLeft{float:left;}.floatRight{float:right;}.textLeft{text-align:left !important;}.textRight{text-align:right !important;}.textCenter{text-align:center !important;}.textJustify{text-align:justify !important;}.center{text-align:center;margin-left:auto;margin-right:auto;}.bold{font-weight:bold;}.italic{font-style:italic;}.underline{text-decoration:underline;}.noindent {margin-left:0;padding-left:0;}.nomargin {margin:0;}.nopadding {padding:0;}.nobullet{list-style:none;list-style-image:none;}.centerself{margin-left:auto;margin-right:auto;}
+@import url("mobile.css") handheld;
+@import url("mobile.css") only screen and (max-device-width:960px);
 a, a:visited, a:active, a:hover {
 	color: #666;
 }
@@ -36,6 +39,9 @@ div#nav {
 		line-height: 35px;
 		vertical-align: middle;
 	}
+	div#nav select {
+		display: none;
+	}
 div#bodyspace {
 	width: 80%;
 	margin-top: 50px;
@@ -50,19 +56,20 @@ section.project {
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
-	background-color: #f7edd8;
-	box-shadow: 0 0 10px #ddd;
+	background-color: #f1ddb5;
+	box-shadow: 0 0 10px #bbb;
 	margin-bottom: 30px;
 }
 	section.project img {
 		width: 120px;
 		padding: 10px;
+		
 	}
 	section.project p {
 		text-align: center !important;
 		font-size: 30px;
 	}
 	section.project:hover {
-		background-color: #f6e9cf;
-		box-shadow: 0 0 15px #bbb;
+		background-color:#eed5a4;
+		box-shadow: 0 0 15px #999;
 	}
