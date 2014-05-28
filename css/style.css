@@ -63,7 +63,8 @@ section.project {
 	section.project img {
 		width: 120px;
 		padding: 10px;
-		
+		padding-left: 37.5%;
+		padding-right: 37.5%;
 	}
 	section.project p {
 		text-align: center !important;
