@@ -15,7 +15,7 @@ function objectCanvas(input_canvasid, input_ticks, input_tickWidth, input_xOffse
 	this.centerWidth = Math.round(this.canvasWidth() / 2);
 	this.centerHeight = Math.round(this.canvasHeight() / 2);
 	this.ticks = input_ticks; // number of ticks wanted on either side of the origin horizontally and vertically, when the origin is absolutely centered
-	var tickWidth = input_tickWidth;
+	var tickWidth = input_tickWidth / 2;
 	var interval = Math.round(((height + width) / this.ticks) * 2); // number of pixels needed between each tick horizontally, rounded
 	var xOffset = (input_xOffset) * interval /2; // number of pixels offseting the origin horizontally; positive numbers move the origin to the right
 	var yOffset = (input_yOffset) * interval /2; // number of pixels offseting the origin vertically; positive numbers move the origin down
@@ -30,8 +30,8 @@ function objectCanvas(input_canvasid, input_ticks, input_tickWidth, input_xOffse
 	var pos;
 	this.context.strokeStyle = input_tickColor;
 		//draw left-side horizontal ticks
-		pos = cWidth;
-		for (var i=0; pos>=0; i++) {
+		pos = cWidth - (interval/2);
+		for (var i=1; pos>=0; i++) {
 			this.context.beginPath();
 			this.context.moveTo(pos, cHeight-tickWidth);
 			this.context.lineTo(pos, cHeight+tickWidth);
@@ -39,8 +39,8 @@ function objectCanvas(input_canvasid, input_ticks, input_tickWidth, input_xOffse
 			pos-=(interval/2);
 		}
 		//draw right-side horizontal ticks
-		pos = cWidth;
-		for (var i=0; pos<=width; i++) {
+		pos = cWidth + (interval/2);
+		for (var i=1; pos<=width; i++) {
 			this.context.beginPath();
 			this.context.moveTo(pos, cHeight-tickWidth);
 			this.context.lineTo(pos, cHeight+tickWidth);
@@ -48,7 +48,7 @@ function objectCanvas(input_canvasid, input_ticks, input_tickWidth, input_xOffse
 			pos+=(interval/2);
 		}
 		//draw bottom-side vertical ticks
-		pos = cHeight;
+		pos = cHeight + (interval/2);
 		for (var i=0; pos<=height; i++) {
 			this.context.beginPath();
 			this.context.moveTo(cWidth-tickWidth, pos);
@@ -57,7 +57,7 @@ function objectCanvas(input_canvasid, input_ticks, input_tickWidth, input_xOffse
 			pos+=(interval/2);
 		}
 		//draw top-side vertical ticks
-		pos = cHeight;
+		pos = cHeight - (interval/2);
 		for (var i=0; pos>=0; i++) {
 			this.context.beginPath();
 			this.context.moveTo(cWidth-tickWidth, pos);
@@ -78,7 +78,21 @@ function objectCanvas(input_canvasid, input_ticks, input_tickWidth, input_xOffse
 		this.context.stroke();
 }
 function main() {
-	window.myCanvas = new objectCanvas('c', 10, 10000, 0, 0, 2, '#000', '#bbb');
+	var tick = document.getElementById('form_tick').value;
+	var tickWidth = document.getElementById('form_tickWidth').value;
+	var xOffset = document.getElementById('form_xOffset').value;
+	var yOffset = document.getElementById('form_yOffset').value;
+	var thickness = document.getElementById('form_thickness').value;
+	var axisColor = document.getElementById('form_axisColor').value;
+	var tickColor = document.getElementById('form_tickColor').value;
+	if (tick == "") tick = 5;
+	if (tickWidth == "") tickWidth = 10;
+	if (xOffset == "") xOffset = 0;
+	if (yOffset == "") yOffsey = 0;
+	if (thickness == "") thickness = 1;
+	if (axisColor == "") axisColor = '#000';
+	if (tickColor == "") tickColor = '#333';
+	window.myCanvas = new objectCanvas('c', tick, tickWidth, xOffset, yOffset, thickness, axisColor, tickColor);
 }
 window.onload = main;
 window.onresize = main;
