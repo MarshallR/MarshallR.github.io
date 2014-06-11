@@ -1,15 +1,27 @@
 <!DOCTYPE html>
 <html>
 </head><body style="height: 100%;">
-	<canvas id="c" style="border: 1px solid #000; width: 100%; height: 500px; height: 96%;"></canvas>
+	<section style="
+		margin: 0 auto;
+		text-align: center;
+		height: 50%;">
+		<canvas id="c" style="
+			border: 1px solid #000;
+			width: 100%;
+			height: 50%;">
+		</canvas>
+	</section>
 	<form id="inputForm" onchange="main()">
-		Tick Number: <input type="text" value="" id="form_tick" /><br />
+		Canvas Width = <span id="out_width"></span><br />
+		Canvas Height = <span id="out_height"></span><br />
+		Tick Number: <input type="text" value="" id="form_tick" /> interval = (width / ticks) / 2 = <span id="out_interval"></span><br />
 		Tick Width: <input type="text" value="" id="form_tickWidth" /><br />
 		X Offset: <input type="text" value="" id="form_xOffset" /><br />
 		Y Offset: <input type="text" value="" id="form_yOffset" /><br />
 		Thickness: <input type="text" value="" id="form_thickness" /><br />
 		Axis Color: <input type="text" value="" id="form_axisColor" /><br />
 		Tick Color: <input type="text" value="" id="form_tickColor" /><br />
+		<span id="out_test"></span>
 	</form>
 	<script src="function.js"></script>
 </body></html>
