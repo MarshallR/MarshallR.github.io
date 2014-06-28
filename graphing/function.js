@@ -85,19 +85,19 @@ function objectCanvas(input_canvasid, input_ticks, input_tickWidth, input_xOffse
 		// run through each function
 		for(var i=0;i<functions.length;i++) {
 			// interpret function
-			// var current_function = functions[i];//get function
-			// pullfunction = /function\s*\((\s*[a-z|A-Z]*\s*\,*\s*)*\)/;
-			// var argument = pullfunction.exec(current_function);
-			// argument = argument[1];
+			var current_function = functions[i];//get function
+			pullfunction = /function\s*\((\s*[a-z|A-Z]*\s*\,*\s*)*\)/;
+			var argument = pullfunction.exec(current_function);
+			argument = argument[1];
 			// argument.replace(/\s*/g, "");
 			// if (argument=='x') {
-				// alert('horizontal graph ' + argument);
+				// for (var ii=0;ii<width+10;ii+graphInterval) {
+					
+				// }
 			// }
 			// else if (argument=='y') {
-				// alert('vertical graph ' + argument);
 			// }
 			// else {
-				// alert('put other thing here ' + argument)
 			// }
 		}
 	this.funny = functions;
@@ -124,7 +124,7 @@ function main() {
 		function(b) {
 			return  2*x;
 		},
-		function ( x )  {
+		function (x)  {
 			return  10*x;
 		}
 	]);
