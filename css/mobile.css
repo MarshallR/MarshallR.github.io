@@ -1,9 +1,0 @@
-div#nav {
-	text-align: center;
-}
-	div#nav ul {
-		display: none;
-	}
-	div#nav select {
-		display: block;
-	}
