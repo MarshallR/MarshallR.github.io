@@ -22,6 +22,11 @@ div#navbuttons {
 	margin: 0 0 0 auto;
 	width: auto;
 }
+img#sharebutton {
+	float: right;
+	height: 44px;
+	padding: 3px 10px 3px 0;
+}
 section.post {
 	margin: 20px 0;
 	background-color: #fff;
