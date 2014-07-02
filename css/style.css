@@ -28,6 +28,19 @@ img#sharebutton {
 	height: 44px;
 	padding: 3px 10px 3px 0;
 }
+div#sharebuttons {
+	height: 40px;
+	padding: 5px 10px;
+	border-radius: 5px 0 0 5px;
+	background-color: #f5e6d0;
+	position: absolute;
+	right: 85px;
+	top: 0;
+}
+	div#sharebuttons img {
+		height: 40px;
+		cursor: pointer;
+	}
 section.post {
 	margin: 20px 0;
 	background-color: #fff;
