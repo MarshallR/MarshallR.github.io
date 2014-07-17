@@ -13,7 +13,7 @@ function play(sound) {
 	window.audio = document.createElement('audio');
 	window.audio.src = './sounds/' + sound + '.mp3';
 	if (window.grape.test(window.audio.src)==false) {
-		window.grape = new RegExp(sound, 'g')
+		window.grape = new RegExp(sound, 'g');
 		window.audio.play();
 	}
 }
