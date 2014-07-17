@@ -1,0 +1,35 @@
+<!-- HTML generator for Marshall's Webisite -->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<title>HTML Generator</title>
+	<meta charset="UTF-8" />
+</head><body>
+	<form>
+		Image: <input type="text" id="image" value="picture" /><br />
+		Image - Type: <input type="text" id="imagetype" value="png" /><br />
+		Image - Alt: <input type="text" id="imagealt" value="picture" /><br />
+		Image - Title: <input type="text" id="imagetitle" value="title" /><br />
+		Title: <input type="text" id="title" value="Page" /><br />
+		Description: <textarea id="description"></textarea><br />
+		Link: <input type="text" id="link" value="page.htm" /><br />
+	</form>
+		<input type="button" value="submit" onclick="submit()" />
+	<br />
+	<textarea id="output" style="background-color: #ddd;" cols="150" rows="20">HTML output here</textarea>
+	
+	<script>
+		function submit() {
+			var imagepath = document.getElementById('image').value;
+			var imagetype = document.getElementById('imagetype').value;
+			var imagealt = document.getElementById('imagealt').value;
+			var imagetitle = document.getElementById('imagetype').value;
+			var title = document.getElementById('title').value;
+			var description = document.getElementById('description').value;
+			var link = document.getElementById('link').value;
+			
+			var output = 
+			'<section class="post">\n\t<section><a href="./' + link + '/">\n\t\t<img src="./images/' + imagepath + "." + imagetype + '" alt="' + imagealt + '" title="' + imagetitle + '" class="titleimage" />\n\t\t<p>\n\t\t\t' + title + '\n\t\t</p>\n\t</a></section>\n\t<section>\n\t\t' + description + '\n\t</section>\n</section>'
+			document.getElementById('output').value = output;
+		}
+	</script>
+</body></html>
