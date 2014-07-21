@@ -5,13 +5,15 @@ $('img#sharebutton').click(function() {
 	$('div#sharebuttons').fadeToggle();
 });
 
-window.grape = new RegExp('helloworld');
+window.grape = new RegExp('helloworld' ,'g');
 function play(sound) {
 	if (window.audio) {
-		window.audio.pause();
+		window.audio.src = "";
+		window.audio.removeAttribute("src");
 	}
 	window.audio = document.createElement('audio');
 	window.audio.src = './sounds/' + sound + '.mp3';
+	window.audio.controls = 'true';
 	if (window.grape.test(window.audio.src)==false) {
 		window.grape = new RegExp(sound, 'g');
 		window.audio.play();
