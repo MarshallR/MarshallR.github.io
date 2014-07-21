@@ -17,15 +17,10 @@ div#header {
 	padding-left: 10px;
 	z-index: 100;
 }
-div#navbuttons {
-	text-align: right;
-	margin: 0 0 0 auto;
-	width: auto;
-}
 img#sharebutton {
 	float: right;
 	height: 44px;
-	padding: 3px 10px 3px 0;
+	padding: 3px 15px 3px 0;
 }
 div#sharebuttons {
 	height: 40px;
