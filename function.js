@@ -4,4 +4,4 @@
 $('div#sharebuttons').hide();
 $('img#sharebutton').click(function() {
 	$('div#sharebuttons').fadeToggle();
-});
+});//
